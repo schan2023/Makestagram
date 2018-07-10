@@ -21,5 +21,12 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Outlets
+    @IBOutlet weak var loginButton: UIButton!
+    
+    //Actions
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        print("login button was tapped")
+    }
     
 }
