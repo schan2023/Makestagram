@@ -8,6 +8,10 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
+import FirebaseUI
+
+typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController {
     
@@ -26,7 +30,25 @@ class LoginViewController: UIViewController {
     
     //Actions
     @IBAction func loginButtonTapped(_ sender: Any) {
-        print("login button was tapped")
+        //Access FUIAuth default auth UI singleton
+        guard let authUI = FUIAuth.defaultAuthUI()
+            else { return }
+        //Set FUIAuth's singleton's delegate
+        authUI.delegate = self
+        //Present the auth view controller
+        let authViewController = authUI.authViewController()
+        //Implement FUIAuthDelegate protocol
+        present(authViewController, animated: true)
     }
     
+}
+
+//Conforms LoginViewController to FUIAuthDelegate
+extension LoginViewController: FUIAuthDelegate {
+    func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
+        if let error = error {
+            assertionFailure("Error signing in: \(error.localizedDescription)" )
+            return
+        }
+    }
 }

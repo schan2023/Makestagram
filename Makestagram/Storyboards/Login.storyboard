@@ -38,13 +38,15 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="A4j-ha-gii"/>
+                                            <constraint firstAttribute="width" constant="240" id="Hoq-65-OKP"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="1Le-xJ-YTb" firstAttribute="centerX" secondItem="la0-9P-rLk" secondAttribute="centerX" id="CgE-n3-yoc"/>
+                                    <constraint firstItem="1Le-xJ-YTb" firstAttribute="centerX" secondItem="la0-9P-rLk" secondAttribute="centerX" id="LIW-4y-5Sb"/>
+                                    <constraint firstItem="1Le-xJ-YTb" firstAttribute="centerY" secondItem="la0-9P-rLk" secondAttribute="centerY" id="c0M-mx-hrJ"/>
                                     <constraint firstItem="1Le-xJ-YTb" firstAttribute="centerY" secondItem="la0-9P-rLk" secondAttribute="centerY" id="swL-cC-hQl"/>
                                     <constraint firstAttribute="height" constant="265" id="vfd-Wu-eAQ"/>
                                 </constraints>
@@ -64,7 +66,6 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="la0-9P-rLk" secondAttribute="trailing" id="855-Ny-T9G"/>
-                            <constraint firstAttribute="bottom" secondItem="la0-9P-rLk" secondAttribute="bottom" constant="433" id="8FH-lX-IDx"/>
                             <constraint firstItem="8tQ-Ir-EAm" firstAttribute="bottom" secondItem="zpF-H9-hKF" secondAttribute="bottom" constant="333" id="FQh-f4-cDh"/>
                             <constraint firstItem="zpF-H9-hKF" firstAttribute="leading" secondItem="8tQ-Ir-EAm" secondAttribute="leading" constant="35" id="HWa-yq-B4t"/>
                             <constraint firstItem="8tQ-Ir-EAm" firstAttribute="trailing" secondItem="zpF-H9-hKF" secondAttribute="trailing" constant="35" id="TVZ-a4-W7g"/>
