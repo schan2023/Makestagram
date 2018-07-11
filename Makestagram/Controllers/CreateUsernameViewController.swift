@@ -16,14 +16,15 @@ class CreateUsernameViewController: UIViewController {
         
         nextButton.layer.cornerRadius = 6
     }
-    
+
     //Outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
     //Actions
     @IBAction func nextButtonTapped(_ sender: Any) {
-        //Create user in database
+        //create new user and store in database
+        
     }
-
+    
 }

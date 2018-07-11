@@ -51,7 +51,7 @@ extension LoginViewController: FUIAuthDelegate {
             assertionFailure("Error signing in: \(error.localizedDescription)" )
             return
         }
-        
+
         //Building database reference
         //If FIRUser exists, we get a reference to the root of our JSON dictionary
         //We create a Database reference by adding a relative path /users/#{user.uid}
@@ -59,16 +59,18 @@ extension LoginViewController: FUIAuthDelegate {
         guard let user = user
             else { return }
         let userRef = Database.database().reference().child("users").child(user.uid)
-        
+
         //Read from path we created and pass an event closure to handle the data (snapshot) that is passed back from the database
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
             //Retrieving snapshot of data - if snapshot exists, user exists
             if let user = User(snapshot: snapshot) {
                 print("Welcome back, \(user.username).")
             }
             else {
-                print("New user!")
+                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
             }
         })
     }
 }
+
+

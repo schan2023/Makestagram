@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NeM-Vf-vd6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CLf-mG-EKQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -75,13 +75,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8oP-up-OR8"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wfN-Ky-26q"/>
                     <connections>
                         <outlet property="loginButton" destination="HK0-Bc-rG1" id="jw9-i1-BVb"/>
+                        <segue destination="EmM-Ka-H5f" kind="show" identifier="toCreateUsername" id="Fsf-OH-SFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A06-4J-iON" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="77"/>
+            <point key="canvasLocation" x="892" y="76.911544227886068"/>
         </scene>
         <!--Create Username View Controller-->
         <scene sceneID="KSd-lH-gFk">
@@ -127,7 +129,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="nextButtonTapped:" destination="EmM-Ka-H5f" eventType="touchUpInside" id="oak-ve-8ks"/>
+                                            <action selector="nextButtonTapped:" destination="EmM-Ka-H5f" eventType="touchUpInside" id="wbG-5X-N6d"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -148,13 +150,30 @@
                         <viewLayoutGuide key="safeArea" id="lro-Jp-U9v"/>
                     </view>
                     <connections>
-                        <outlet property="nextButon" destination="5kb-LE-xeT" id="tAC-7C-qOD"/>
-                        <outlet property="usernameTextField" destination="QzZ-Qb-5ej" id="zO9-ES-VNV"/>
+                        <outlet property="nextButton" destination="5kb-LE-xeT" id="yX1-Vt-lqR"/>
+                        <outlet property="usernameTextField" destination="QzZ-Qb-5ej" id="yeo-Aw-vC8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wE-Ag-Uep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.60000000000002" y="87.706146926536732"/>
+            <point key="canvasLocation" x="1730" y="77"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lH7-8A-SLH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="CLf-mG-EKQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z4x-Tc-tHs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NeM-Vf-vd6" kind="relationship" relationship="rootViewController" id="KJf-up-VP9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XM6-2C-789" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="76.911544227886068"/>
         </scene>
     </scenes>
 </document>
