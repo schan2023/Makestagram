@@ -31,24 +31,14 @@ class CreateUsernameViewController: UIViewController {
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
             !username.isEmpty else { return }
-        
-        //2) create dictionary to store username
-        let userAttrs = ["username": username]
-        
-        //3) specify relative path for where we want to store our data
-        let ref = Database.database().reference().child("users").child(firUser.uid)
-        
-        //4) Write data we want to store
-        ref.setValue(userAttrs) { (error, ref) in
-            if let error = error {
-                assertionFailure(error.localizedDescription)
-                return
-            }
-            //Read user we just wrote to database and create new user from snapshot
-            ref.observeSingleEvent(of: .value, with: {(snapshot) in
-                let user = User(snapshot: snapshot)
-            })
+    
+        //Method to handle networking between database
+        UserService.create(firUser, username: username) { (user) in
+            guard let user = user else { return }
+            
+            print("Created new user: \(user.username)")
         }
+        
     }
     
 }

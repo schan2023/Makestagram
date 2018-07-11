@@ -18,6 +18,7 @@
 		FC0484D820F42A9800B76191 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC0484D720F42A9800B76191 /* GoogleService-Info.plist */; };
 		FC343BC820F66CBE00BC2754 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC343BC720F66CBE00BC2754 /* CreateUsernameViewController.swift */; };
 		FC39709220F576B50023F8D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39709120F576B50023F8D3 /* User.swift */; };
+		FCC716C620F6CB1B00ADFCAD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716C520F6CB1B00ADFCAD /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FC0484D720F42A9800B76191 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC343BC720F66CBE00BC2754 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		FC39709120F576B50023F8D3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FCC716C520F6CB1B00ADFCAD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		FC0484CB20F417EC00B76191 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FCC716C520F6CB1B00ADFCAD /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				FC39709220F576B50023F8D3 /* User.swift in Sources */,
 				FC0484D420F423E200B76191 /* LoginViewController.swift in Sources */,
+				FCC716C620F6CB1B00ADFCAD /* UserService.swift in Sources */,
 				FC0484B420F40A5F00B76191 /* ViewController.swift in Sources */,
 				FC343BC820F66CBE00BC2754 /* CreateUsernameViewController.swift in Sources */,
 				FC0484B220F40A5F00B76191 /* AppDelegate.swift in Sources */,
