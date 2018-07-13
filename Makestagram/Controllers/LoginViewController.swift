@@ -53,23 +53,20 @@ extension LoginViewController: FUIAuthDelegate {
         }
 
         //Building database reference
-        //If FIRUser exists, we get a reference to the root of our JSON dictionary
-        //We create a Database reference by adding a relative path /users/#{user.uid}
-        //Created a relative path from location we want to read from
-        guard let user = user
-            else { return }
-        let userRef = Database.database().reference().child("users").child(user.uid)
-
-        //Read from path we created and pass an event closure to handle the data (snapshot) that is passed back from the database
-        userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
-            //Retrieving snapshot of data - if snapshot exists, user exists
-            if let user = User(snapshot: snapshot) {
-                print("Welcome back, \(user.username).")
+        UserService.show(forUID: user!.uid) { (user) in
+            //If user exists, returns back to main storyboard
+            if let user = user {
+                //handle existing user
+                User.setCurrent(user)
+            
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
             }
             else {
-                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
             }
-        })
+        }
     }
 }
 

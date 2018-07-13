@@ -19,6 +19,8 @@
 		FC343BC820F66CBE00BC2754 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC343BC720F66CBE00BC2754 /* CreateUsernameViewController.swift */; };
 		FC39709220F576B50023F8D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39709120F576B50023F8D3 /* User.swift */; };
 		FCC716C620F6CB1B00ADFCAD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716C520F6CB1B00ADFCAD /* UserService.swift */; };
+		FCC716C820F7F01800ADFCAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716C720F7F01800ADFCAD /* Constants.swift */; };
+		FCC716CA20F7F89700ADFCAD /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716C920F7F89700ADFCAD /* Storyboard+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FC343BC720F66CBE00BC2754 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		FC39709120F576B50023F8D3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FCC716C520F6CB1B00ADFCAD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		FCC716C720F7F01800ADFCAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FCC716C920F7F89700ADFCAD /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		FC0484C820F417BE00B76191 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FCC716C920F7F89700ADFCAD /* Storyboard+Utility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			children = (
 				FC0484D720F42A9800B76191 /* GoogleService-Info.plist */,
 				FC0484BD20F40A7700B76191 /* Info.plist */,
+				FCC716C720F7F01800ADFCAD /* Constants.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -312,7 +318,9 @@
 				FC39709220F576B50023F8D3 /* User.swift in Sources */,
 				FC0484D420F423E200B76191 /* LoginViewController.swift in Sources */,
 				FCC716C620F6CB1B00ADFCAD /* UserService.swift in Sources */,
+				FCC716CA20F7F89700ADFCAD /* Storyboard+Utility.swift in Sources */,
 				FC0484B420F40A5F00B76191 /* ViewController.swift in Sources */,
+				FCC716C820F7F01800ADFCAD /* Constants.swift in Sources */,
 				FC343BC820F66CBE00BC2754 /* CreateUsernameViewController.swift in Sources */,
 				FC0484B220F40A5F00B76191 /* AppDelegate.swift in Sources */,
 			);

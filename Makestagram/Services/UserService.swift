@@ -37,4 +37,19 @@ struct UserService {
         }
     }
     
+    //If FIRUser exists, we get a reference to the root of our JSON dictionary
+    //We create a Database reference by adding a relative path /users/#{user.uid}
+    //Created a relative path from location we want to read from
+    //Read from path we created and pass an event closure to handle the data (snapshot) that is passed back from the database
+    static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
+        let ref = Database.database().reference().child("users").child(uid)
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let user = User(snapshot: snapshot) else {
+                return completion(nil)
+            }
+            
+            completion(user)
+        })
+    }
+    
 }
