@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E8AB12401F54EDFEFB5AEB4E /* Pods_Makestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0554B10CFB2F045DD96A9166 /* Pods_Makestagram.framework */; };
 		FC0484B220F40A5F00B76191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0484B120F40A5F00B76191 /* AppDelegate.swift */; };
-		FC0484B420F40A5F00B76191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0484B320F40A5F00B76191 /* ViewController.swift */; };
 		FC0484B720F40A6000B76191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0484B520F40A6000B76191 /* Main.storyboard */; };
 		FC0484B920F40A7700B76191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0484B820F40A7700B76191 /* Assets.xcassets */; };
 		FC0484BC20F40A7700B76191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0484BA20F40A7700B76191 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,8 @@
 		FCC716C620F6CB1B00ADFCAD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716C520F6CB1B00ADFCAD /* UserService.swift */; };
 		FCC716C820F7F01800ADFCAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716C720F7F01800ADFCAD /* Constants.swift */; };
 		FCC716CA20F7F89700ADFCAD /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716C920F7F89700ADFCAD /* Storyboard+Utility.swift */; };
+		FCC716CC20F9297E00ADFCAD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716CB20F9297D00ADFCAD /* HomeViewController.swift */; };
+		FCC716CE20F9299100ADFCAD /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC716CD20F9299100ADFCAD /* FindFriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,6 @@
 		E29A345C02FD77BA43F818B2 /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0484AE20F40A5F00B76191 /* Makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0484B120F40A5F00B76191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC0484B320F40A5F00B76191 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC0484B620F40A6000B76191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC0484B820F40A7700B76191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0484BB20F40A7700B76191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +42,8 @@
 		FCC716C520F6CB1B00ADFCAD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FCC716C720F7F01800ADFCAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FCC716C920F7F89700ADFCAD /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		FCC716CB20F9297D00ADFCAD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FCC716CD20F9299100ADFCAD /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +113,10 @@
 		FC0484C720F417A800B76191 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC0484B320F40A5F00B76191 /* ViewController.swift */,
 				FC0484D320F423E200B76191 /* LoginViewController.swift */,
 				FC343BC720F66CBE00BC2754 /* CreateUsernameViewController.swift */,
+				FCC716CB20F9297D00ADFCAD /* HomeViewController.swift */,
+				FCC716CD20F9299100ADFCAD /* FindFriendsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -318,8 +321,9 @@
 				FC39709220F576B50023F8D3 /* User.swift in Sources */,
 				FC0484D420F423E200B76191 /* LoginViewController.swift in Sources */,
 				FCC716C620F6CB1B00ADFCAD /* UserService.swift in Sources */,
+				FCC716CC20F9297E00ADFCAD /* HomeViewController.swift in Sources */,
 				FCC716CA20F7F89700ADFCAD /* Storyboard+Utility.swift in Sources */,
-				FC0484B420F40A5F00B76191 /* ViewController.swift in Sources */,
+				FCC716CE20F9299100ADFCAD /* FindFriendsViewController.swift in Sources */,
 				FCC716C820F7F01800ADFCAD /* Constants.swift in Sources */,
 				FC343BC820F66CBE00BC2754 /* CreateUsernameViewController.swift in Sources */,
 				FC0484B220F40A5F00B76191 /* AppDelegate.swift in Sources */,
