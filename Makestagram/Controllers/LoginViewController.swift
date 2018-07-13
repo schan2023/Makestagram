@@ -57,7 +57,7 @@ extension LoginViewController: FUIAuthDelegate {
             //If user exists, returns back to main storyboard
             if let user = user {
                 //handle existing user
-                User.setCurrent(user)
+                User.setCurrent(user, writeToUserDefaults: true)
             
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController

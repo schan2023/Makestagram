@@ -37,7 +37,7 @@ class CreateUsernameViewController: UIViewController {
             guard let user = user else { return }
             
             //Sets current user after creation
-            User.setCurrent(user)
+            User.setCurrent(user, writeToUserDefaults: true)
             
             //Check that storyboard has initial view controller
             //Get reference to current window and set rootViewController
